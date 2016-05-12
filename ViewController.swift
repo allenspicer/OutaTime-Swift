@@ -16,37 +16,31 @@ class ViewController: UIViewController, DatePickerDelegate {
     @IBOutlet weak var lastTimeDepartedLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
     
+    @IBAction func travelBack(sender: AnyObject) {
+        self.startTimer()
+    }
     
     var timer:NSTimer?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    func destinationDateWasChosen(sender: DatePicker){
-    
-    }
-    
-    @IBAction func travelBack(sender: AnyObject) {
-        //self.startTimer
+    func destinationDateWasChosen(destinationDate:NSDate){
+        let destinationDateString = String(destinationDate)
+        destinationTimeLabel.text = destinationDateString
     }
     
     func startTimer() {
-    
-//        if let (speedometerTiming){
-//        }else{
            timer =  NSTimer .scheduledTimerWithTimeInterval(0.01,
-                                                    target: self,
-                                                    selector: Selector(updateSpeed()),
-                                                    userInfo: nil,
-                                                    repeats: true)
+                    target: self,
+                    selector: Selector(updateSpeed()),
+                    userInfo: nil,
+                    repeats: true)
     }
     
     func stopTimer (){
-        
-        
-        
+        timer?.invalidate()
+      //make timer empty
     }
     
     func updateSpeed (){
@@ -58,11 +52,8 @@ class ViewController: UIViewController, DatePickerDelegate {
 
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowDestinationDatePickerSegue"){
-            
         let destinationViewController:DatePicker = segue.destinationViewController as! DatePicker
         destinationViewController.delegate = self
-    
-            
         }
     }
 
