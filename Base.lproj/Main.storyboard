@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PWC-Qm-as1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="digital-7.ttf">
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+            <string>Digital-7</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OutaTime_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +28,156 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESTINATION TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-Ru-m4s">
+                                <rect key="frame" x="246" y="153" width="109" height="16"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reu-BS-t6R">
+                                <rect key="frame" x="257" y="246" width="86" height="16"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-sA-ofx">
+                                <rect key="frame" x="210" y="282" width="180" height="37"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
+                                <color key="textColor" red="0.091260845239999999" green="1" blue="0.21870468809999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME AT LAST DEPARTURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zor-7Z-U1M" userLabel="LAST TIME DEPARTED">
+                                <rect key="frame" x="220" y="339" width="160" height="16"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --- ---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELJ-B7-imb">
+                                <rect key="frame" x="225" y="375" width="150" height="37"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 MPH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07z-RV-dL5">
+                                <rect key="frame" x="257" y="468" width="87" height="37"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-aF-N6p">
+                                <rect key="frame" x="217" y="525" width="167" height="30"/>
+                                <state key="normal" title="SET DESTINATION TIME"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-yg-68d">
+                                <rect key="frame" x="251" y="575" width="98" height="30"/>
+                                <state key="normal" title="TRAVEL BACK"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWu-lS-cYr">
+                                <rect key="frame" x="210" y="189" width="180" height="37"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
+                                <color key="textColor" red="0.78903317449999999" green="0.1806175411" blue="0.16475954649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIt-AI-fos" userLabel="LAST TIME DEPARTED">
+                                <rect key="frame" x="281" y="432" width="39" height="16"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Reu-BS-t6R" firstAttribute="top" secondItem="PWu-lS-cYr" secondAttribute="bottom" constant="20" id="1vE-Ek-hMf"/>
+                            <constraint firstItem="ELJ-B7-imb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3LK-OO-ISI"/>
+                            <constraint firstItem="eNl-Ru-m4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="6AE-Zd-F7c"/>
+                            <constraint firstItem="PWu-lS-cYr" firstAttribute="top" secondItem="eNl-Ru-m4s" secondAttribute="bottom" constant="20" id="7MB-q8-GgY"/>
+                            <constraint firstItem="m7b-sA-ofx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bh6-AD-6VE"/>
+                            <constraint firstItem="07z-RV-dL5" firstAttribute="top" secondItem="MIt-AI-fos" secondAttribute="bottom" constant="20" id="EsN-4M-xE9"/>
+                            <constraint firstItem="m7b-sA-ofx" firstAttribute="top" secondItem="Reu-BS-t6R" secondAttribute="bottom" constant="20" id="GAZ-sE-LF8"/>
+                            <constraint firstItem="MIt-AI-fos" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GZh-gv-UXh"/>
+                            <constraint firstItem="BUd-yg-68d" firstAttribute="top" secondItem="mSh-aF-N6p" secondAttribute="bottom" constant="20" id="Gfh-7B-18D"/>
+                            <constraint firstItem="Zor-7Z-U1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ID9-Pa-swc"/>
+                            <constraint firstItem="mSh-aF-N6p" firstAttribute="top" secondItem="07z-RV-dL5" secondAttribute="bottom" constant="20" id="Nyu-pj-MC0"/>
+                            <constraint firstItem="PWu-lS-cYr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aPh-Wq-zGM"/>
+                            <constraint firstItem="Reu-BS-t6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxt-Cg-gik"/>
+                            <constraint firstItem="mSh-aF-N6p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbd-a4-Usr"/>
+                            <constraint firstItem="eNl-Ru-m4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gBP-fx-DqY"/>
+                            <constraint firstItem="ELJ-B7-imb" firstAttribute="top" secondItem="Zor-7Z-U1M" secondAttribute="bottom" constant="20" id="iZY-Sf-h2t"/>
+                            <constraint firstItem="Zor-7Z-U1M" firstAttribute="top" secondItem="m7b-sA-ofx" secondAttribute="bottom" constant="20" id="j7A-ce-CSx"/>
+                            <constraint firstItem="BUd-yg-68d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qx2-OM-25f"/>
+                            <constraint firstItem="07z-RV-dL5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQS-vk-oh4"/>
+                            <constraint firstItem="MIt-AI-fos" firstAttribute="top" secondItem="ELJ-B7-imb" secondAttribute="bottom" constant="20" id="wkr-9d-lv1"/>
+                            <constraint firstItem="PWu-lS-cYr" firstAttribute="top" secondItem="eNl-Ru-m4s" secondAttribute="bottom" constant="20" id="wot-8w-NLo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wot-8w-NLo"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="ocr-nb-m4D"/>
+                    <connections>
+                        <segue destination="M2w-NO-yWV" kind="show" id="YFm-C0-0QF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1100" y="301"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nXy-2P-b7c">
+            <objects>
+                <viewController id="M2w-NO-yWV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="di0-rA-tds"/>
+                        <viewControllerLayoutGuide type="bottom" id="uZU-PJ-TXL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ErN-mE-eOf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-AF-Nfs">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445876717.15564197">
+                                    <!--2015-02-17 14:38:37 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1425042000">
+                                    <!--1955-11-05 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1420023600">
+                                    <!--2045-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerX" secondItem="ErN-mE-eOf" secondAttribute="centerX" id="Cdp-gR-TKa"/>
+                            <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerY" secondItem="ErN-mE-eOf" secondAttribute="centerY" id="yxV-1Z-gik"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4P2-Vu-h6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZJm-1E-YFa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PWC-Qm-as1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ec-Fg-T2q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wRI-nT-w98"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9a-uR-4zk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="-391"/>
         </scene>
     </scenes>
 </document>
