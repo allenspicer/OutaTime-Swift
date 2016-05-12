@@ -7,39 +7,43 @@
 //
 
 import Foundation
+import UIKit
 
-weak var delegate:DatePickerDelegate?
 
-extension ViewController: DatePickerDelegate {
-    func destinationDateWasChosen(sender: DetailViewController) {
-    
-    }
-        // do stuff like updating the UI
+protocol DatePickerDelegate {
+        func destinationDateWasChosen(destinationDate:NSDate)
 }
 
 
-class DatePicker{
+class DatePicker:UIViewController{
+    
+ var delegate:DatePickerDelegate?
 
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillDisappear(animated:Bool){
-        super.viewWillDisappear.animated()
-
-//set delegate equal to     self.datePicker.date
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+//
+//    @IBOutlet weak var datePicker: UIDatePicker!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view, typically from a nib.
+//    }
+//    
+//    override func viewWillDisappear(animated:Bool){
+//        super.viewWillDisappear.animated()
+//
+//            delegate?.destinationDateWasChosen(self.datePicker.date)
+//        
+//    }
+//    
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
+//    
 }
+
+
+
 
 //
 //@interface DatePickerViewController : UIViewController
@@ -195,17 +199,25 @@ class DatePicker{
 
 
 
+
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"ShowDestinationDatePickerSegue"])
     {
         DatePickerViewController *timePickerVC = (DatePickerViewController *)[segue destinationViewController];
         //
-        // 10. This view controller needs to be set as the time picker view controller's delegate object.
-        //
-        timePickerVC.delegate = self;
+        // This part is done:
+        
+        DatePicker.delegate = self;
     }
 }
+*/
+
+
+
+
+
 //
 //#pragma mark - TimeCircuitsDatePickerDelegate
 //
