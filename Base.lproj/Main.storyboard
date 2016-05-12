@@ -30,57 +30,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESTINATION TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-Ru-m4s">
-                                <rect key="frame" x="246" y="153" width="109" height="16"/>
+                                <rect key="frame" x="224" y="104" width="153" height="20"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reu-BS-t6R">
-                                <rect key="frame" x="257" y="246" width="86" height="16"/>
+                                <rect key="frame" x="240" y="211" width="121" height="20"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-sA-ofx">
-                                <rect key="frame" x="210" y="282" width="180" height="37"/>
+                                <rect key="frame" x="184" y="251" width="232" height="47"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="0.091260845239999999" green="1" blue="0.21870468809999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME AT LAST DEPARTURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zor-7Z-U1M" userLabel="LAST TIME DEPARTED">
-                                <rect key="frame" x="220" y="339" width="160" height="16"/>
+                                <rect key="frame" x="194" y="318" width="213" height="20"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --- ---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELJ-B7-imb">
-                                <rect key="frame" x="225" y="375" width="150" height="37"/>
+                                <rect key="frame" x="227" y="358" width="147" height="47"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 MPH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07z-RV-dL5">
-                                <rect key="frame" x="257" y="468" width="87" height="37"/>
+                                <rect key="frame" x="239" y="465" width="123" height="47"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-aF-N6p">
-                                <rect key="frame" x="217" y="525" width="167" height="30"/>
+                                <rect key="frame" x="217" y="532" width="167" height="30"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-yg-68d">
-                                <rect key="frame" x="251" y="575" width="98" height="30"/>
+                                <rect key="frame" x="251" y="582" width="98" height="30"/>
                                 <state key="normal" title="TRAVEL BACK"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWu-lS-cYr">
-                                <rect key="frame" x="210" y="189" width="180" height="37"/>
+                                <rect key="frame" x="184" y="144" width="232" height="47"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="0.78903317449999999" green="0.1806175411" blue="0.16475954649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIt-AI-fos" userLabel="LAST TIME DEPARTED">
-                                <rect key="frame" x="281" y="432" width="39" height="16"/>
+                                <rect key="frame" x="273" y="425" width="55" height="20"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                         <constraints>
                             <constraint firstItem="Reu-BS-t6R" firstAttribute="top" secondItem="PWu-lS-cYr" secondAttribute="bottom" constant="20" id="1vE-Ek-hMf"/>
                             <constraint firstItem="ELJ-B7-imb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3LK-OO-ISI"/>
-                            <constraint firstItem="eNl-Ru-m4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="6AE-Zd-F7c"/>
+                            <constraint firstItem="eNl-Ru-m4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="6AE-Zd-F7c"/>
                             <constraint firstItem="PWu-lS-cYr" firstAttribute="top" secondItem="eNl-Ru-m4s" secondAttribute="bottom" constant="20" id="7MB-q8-GgY"/>
                             <constraint firstItem="m7b-sA-ofx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bh6-AD-6VE"/>
                             <constraint firstItem="07z-RV-dL5" firstAttribute="top" secondItem="MIt-AI-fos" secondAttribute="bottom" constant="20" id="EsN-4M-xE9"/>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="1100" y="301"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Picker-->
         <scene sceneID="nXy-2P-b7c">
             <objects>
-                <viewController id="M2w-NO-yWV" sceneMemberID="viewController">
+                <viewController id="M2w-NO-yWV" customClass="DatePicker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="di0-rA-tds"/>
                         <viewControllerLayoutGuide type="bottom" id="uZU-PJ-TXL"/>
@@ -156,6 +156,9 @@
                             <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerY" secondItem="ErN-mE-eOf" secondAttribute="centerY" id="yxV-1Z-gik"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="MtZ-AF-Nfs" id="Dus-hf-mQQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4P2-Vu-h6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

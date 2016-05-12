@@ -7,6 +7,13 @@
 //
 
 import UIKit
+import DatePicker
+
+protocol DatePickerDelegate: class {
+    func destinationDateWasChosen(sender: DetailViewController)
+}
+
+
 
 class ViewController: UIViewController {
 
