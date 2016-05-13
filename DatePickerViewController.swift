@@ -10,17 +10,20 @@ import Foundation
 import UIKit
 
 
-class DatePicker:UIViewController{
+class DatePickerViewController:UIViewController{
     
 @IBOutlet weak var datePicker: UIDatePicker!
     
-override func viewWillDisappear(animated: Bool) {
+
+    
+   func viewWillDisappear(sender: DatePickerViewController) {
         super.viewWillDisappear(true)
+  //  let destinationDate: NSDate = datePicker.date
     
        // DatePickerDelegate.destinationDateWasChosen(self) = datePicker.date
 
-    
 }
+    
 }
     
 //what I would like to do:

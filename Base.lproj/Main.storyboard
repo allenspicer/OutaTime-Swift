@@ -69,7 +69,7 @@
                                 <rect key="frame" x="217" y="456" width="167" height="30"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
-                                    <segue destination="M2w-NO-yWV" kind="show" id="0sf-S5-DB0"/>
+                                    <segue destination="M2w-NO-yWV" kind="show" identifier="ShowDestinationDatePickerSegue" id="0sf-S5-DB0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-yg-68d">

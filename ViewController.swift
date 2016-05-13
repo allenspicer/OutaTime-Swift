@@ -66,8 +66,10 @@ class ViewController: UIViewController, DatePickerDelegate {
 
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowDestinationDatePickerSegue"){
-        let destinationViewController:DatePicker = segue.destinationViewController as! DatePicker
-       // destinationViewController.delegate = self
+        let destinationViewController:DatePickerViewController = segue.destinationViewController as! DatePickerViewController
+       let date = destinationViewController.datePicker
+            print(date)
+            
         }
     }
 
