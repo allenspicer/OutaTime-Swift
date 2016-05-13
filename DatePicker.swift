@@ -10,16 +10,31 @@ import Foundation
 import UIKit
 
 
-
-
-
 class DatePicker:UIViewController{
     
-
+@IBOutlet weak var datePicker: UIDatePicker!
     
-//var delegate:DatePickerDelegate? = DatePicker.
-//DatePickerDelegate.destinationDateWasChosen()
+override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(true)
+    
+       // DatePickerDelegate.destinationDateWasChosen(self) = datePicker.date
+
     
 }
+}
+    
+//what I would like to do:
+//    destinationDateWasChosen(datePicker) = DatePickerDelegate
+    
+    
+    
+    
+//var delegate:DatePickerDelegate? = DatePicker
+//DatePickerDelegate.destinationDateWasChosen()
+    
+    
+    
 
+    
+    
 
