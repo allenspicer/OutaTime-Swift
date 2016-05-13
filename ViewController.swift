@@ -8,9 +8,12 @@
 
 import UIKit
 
+protocol DatePickerDelegate {
+    func destinationDateWasChosen(destinationDate:NSDate)}
 
 class ViewController: UIViewController, DatePickerDelegate {
-
+    
+    
     @IBOutlet weak var destinationTimeLabel: UILabel!
     @IBOutlet weak var presentTimeLabel: UILabel!
     @IBOutlet weak var lastTimeDepartedLabel: UILabel!
@@ -20,7 +23,10 @@ class ViewController: UIViewController, DatePickerDelegate {
         self.startTimer()
     }
     
-    var timer:NSTimer?
+    var speedometerTiming:NSTimer?
+//    var dateFormatter:NSDateFormatter
+    var currentSpeed: NSInteger = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,24 +37,32 @@ class ViewController: UIViewController, DatePickerDelegate {
     }
     
     func startTimer() {
-           timer =  NSTimer .scheduledTimerWithTimeInterval(0.01,
+           speedometerTiming =  NSTimer .scheduledTimerWithTimeInterval(0.01,
                     target: self,
-                    selector: Selector(updateSpeed()),
+                    selector: #selector(updateSpeed),
                     userInfo: nil,
                     repeats: true)
     }
     
     func stopTimer (){
-        timer?.invalidate()
+        speedometerTiming?.invalidate()
       //make timer empty
     }
     
     func updateSpeed (){
-        
-        
-        
+        if (currentSpeed != 88){
+        currentSpeed += 1
+        speedLabel.text = String(currentSpeed)
+        }else{
+            
+            if(currentSpeed >= 88){
+            lastTimeDepartedLabel.text = presentTimeLabel.text
+            presentTimeLabel.text = destinationTimeLabel.text
+            currentSpeed = 0
+            self.stopTimer()
+            }
+        }
     }
-
 
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowDestinationDatePickerSegue"){

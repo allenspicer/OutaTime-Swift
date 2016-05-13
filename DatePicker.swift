@@ -10,11 +10,16 @@ import Foundation
 import UIKit
 
 
-protocol DatePickerDelegate {
-        func destinationDateWasChosen(destinationDate:NSDate)
-}
+
+
 
 class DatePicker:UIViewController{
-var delegate:DatePickerDelegate?
+    
+
+    
+//var delegate:DatePickerDelegate? = DatePicker.
+//DatePickerDelegate.destinationDateWasChosen()
+    
 }
+
 
