@@ -8,33 +8,34 @@
 
 import UIKit
 
-protocol DatePickerDelegate {
-    func destinationDateWasChosen(destinationDate:NSDate)}
-
-class ViewController: UIViewController, DatePickerDelegate {
-    
+class ViewController: UIViewController{
     
     @IBOutlet weak var destinationTimeLabel: UILabel!
     @IBOutlet weak var presentTimeLabel: UILabel!
     @IBOutlet weak var lastTimeDepartedLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     @IBAction func travelBack(sender: AnyObject) {
         self.startTimer()
     }
     
+
+    
+    
     var speedometerTiming:NSTimer?
-//    var dateFormatter:NSDateFormatter
     var currentSpeed: NSInteger = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//if the pciker has a non-nill value 
+                   destinationTimeLabel.text = String(datePicker?.date)
+        
     }
 
-    func destinationDateWasChosen(destinationDate:NSDate){
-        let destinationDateString = String(destinationDate)
-        destinationTimeLabel.text = destinationDateString
-    }
     
     func startTimer() {
            speedometerTiming =  NSTimer .scheduledTimerWithTimeInterval(0.01,
@@ -42,6 +43,7 @@ class ViewController: UIViewController, DatePickerDelegate {
                     selector: #selector(updateSpeed),
                     userInfo: nil,
                     repeats: true)
+
     }
     
     func stopTimer (){
@@ -61,15 +63,6 @@ class ViewController: UIViewController, DatePickerDelegate {
             currentSpeed = 0
             self.stopTimer()
             }
-        }
-    }
-
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "ShowDestinationDatePickerSegue"){
-        let destinationViewController:DatePickerViewController = segue.destinationViewController as! DatePickerViewController
-       let date = destinationViewController.datePicker
-            print(date)
-            
         }
     }
 
