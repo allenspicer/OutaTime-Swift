@@ -17,6 +17,15 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var speedometerTiming:NSTimer?
+    var currentSpeed: NSInteger = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //destinationTimeLabel.text = "JAN 01 2000"
+        
+    }
+    
     
     @IBAction func travelBack(sender: AnyObject) {
         self.startTimer()
@@ -24,21 +33,17 @@ class ViewController: UIViewController{
     
     @IBAction func setDestinationTime(sender: UIButton) {
 
-    if datePicker != nil {
+
         let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd yyyy"
         let date = datePicker.date
         let destinationDateString = dateFormatter.stringFromDate(date)
-        destinationTimeLabel.text = destinationDateString
-        }
-    }
-    var speedometerTiming:NSTimer?
-    var currentSpeed: NSInteger = 0
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+       // destinationTimeLabel.text = destinationDateString
+        NSLog("\(destinationDateString)")
+        
         
     }
+
 
     
     func startTimer() {

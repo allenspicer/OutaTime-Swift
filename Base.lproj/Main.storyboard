@@ -125,7 +125,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ocr-nb-m4D"/>
                     <connections>
-                        <outlet property="destinationTimeLabel" destination="PWu-lS-cYr" id="9nK-xS-inR"/>
+                        <outlet property="destinationTimeLabel" destination="PWu-lS-cYr" id="1aJ-wn-f9h"/>
                         <outlet property="lastTimeDepartedLabel" destination="ELJ-B7-imb" id="5vD-k4-qo3"/>
                         <outlet property="presentTimeLabel" destination="m7b-sA-ofx" id="3xe-da-yrR"/>
                         <outlet property="speedLabel" destination="07z-RV-dL5" id="zjc-OH-cKK"/>
