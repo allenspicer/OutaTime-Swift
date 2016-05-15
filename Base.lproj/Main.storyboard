@@ -14,6 +14,7 @@
             <string>Digital-7</string>
             <string>Digital-7</string>
             <string>Digital-7</string>
+            <string>Digital-7</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -158,10 +159,20 @@
                                     <!--2045-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-Pl-IcG">
+                                <rect key="frame" x="268" y="454" width="65" height="44"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="35"/>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="setDestinationTime:" destination="M2w-NO-yWV" eventType="touchUpInside" id="pd4-MQ-WRG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerX" secondItem="ErN-mE-eOf" secondAttribute="centerX" id="Cdp-gR-TKa"/>
+                            <constraint firstItem="AXa-Pl-IcG" firstAttribute="centerX" secondItem="ErN-mE-eOf" secondAttribute="centerX" id="ciW-3O-h1f"/>
+                            <constraint firstItem="AXa-Pl-IcG" firstAttribute="top" secondItem="MtZ-AF-Nfs" secondAttribute="bottom" constant="53" id="uZe-iC-wn8"/>
                             <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerY" secondItem="ErN-mE-eOf" secondAttribute="centerY" id="yxV-1Z-gik"/>
                         </constraints>
                     </view>

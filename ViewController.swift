@@ -22,17 +22,21 @@ class ViewController: UIViewController{
         self.startTimer()
     }
     
+    @IBAction func setDestinationTime(sender: UIButton) {
 
-    
-    
+    if datePicker != nil {
+        let dateFormatter = NSDateFormatter()
+        let date = datePicker.date
+        let destinationDateString = dateFormatter.stringFromDate(date)
+        destinationTimeLabel.text = destinationDateString
+        }
+    }
     var speedometerTiming:NSTimer?
     var currentSpeed: NSInteger = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//if the pciker has a non-nill value 
-                   destinationTimeLabel.text = String(datePicker?.date)
+
         
     }
 
