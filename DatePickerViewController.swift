@@ -10,18 +10,24 @@ import Foundation
 import UIKit
 
 
-//must specify type of this delegate to be the protocol
 
 var delegate:DatePickerViewControllerDelegate?
 
 
-class DatePickerViewController{
+class DatePickerViewController: UIViewController{
 
-
-    
 @IBOutlet weak var datePicker: UIDatePicker!
-
+    
 @IBAction func saveDateFromDatePicker(sender: UIButton) {
     }
     
 }
+    
+
+    
+    
+
+
+
+
+

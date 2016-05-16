@@ -28,7 +28,8 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
         //destinationTimeLabel.text = "JAN 01 2000"
         
     }
-    
+
+//establish function to conform to protocol (fulfill obligation as delegate)
 func didPickDate(picker: UIDatePicker){
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMM dd yyyy"
