@@ -10,8 +10,7 @@ import UIKit
 
 
 protocol DatePickerViewControllerDelegate{
-    func didPickDate(picker: UIDatePicker)
-}
+    func didPickDate(date: String) -> String}
 
 class ViewController: UIViewController, DatePickerViewControllerDelegate{
     
@@ -30,13 +29,9 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
     }
 
 //establish function to conform to protocol (fulfill obligation as delegate)
-func didPickDate(picker: UIDatePicker){
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMM dd yyyy"
-       let date = picker.date
-        let destinationDateString = dateFormatter.stringFromDate(date)
-        destinationTimeLabel.text = destinationDateString
-    
+    func didPickDate(date: String) -> String{
+        destinationTimeLabel.text = date
+    return date
     }
     
     
