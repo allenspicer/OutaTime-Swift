@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+
+protocol DatePickerViewControllerDelegate{
+    func didPickDate(picker: UIDatePicker)
+}
+
+class ViewController: UIViewController, DatePickerViewControllerDelegate{
     
-    @IBOutlet weak var destinationTimeLabel: UILabel!
-    @IBOutlet weak var presentTimeLabel: UILabel!
-    @IBOutlet weak var lastTimeDepartedLabel: UILabel!
-    @IBOutlet weak var speedLabel: UILabel!
-    
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet  var destinationTimeLabel: UILabel!
+    @IBOutlet  var presentTimeLabel: UILabel!
+    @IBOutlet  var lastTimeDepartedLabel: UILabel!
+    @IBOutlet  var speedLabel: UILabel!
     
     var speedometerTiming:NSTimer?
     var currentSpeed: NSInteger = 0
@@ -26,25 +29,20 @@ class ViewController: UIViewController{
         
     }
     
+func didPickDate(picker: UIDatePicker){
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd yyyy"
+       let date = picker.date
+        let destinationDateString = dateFormatter.stringFromDate(date)
+        destinationTimeLabel.text = destinationDateString
+    
+    }
+    
     
     @IBAction func travelBack(sender: AnyObject) {
         self.startTimer()
     }
     
-    @IBAction func setDestinationTime(sender: UIButton) {
-
-
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMM dd yyyy"
-        let date = datePicker.date
-        let destinationDateString = dateFormatter.stringFromDate(date)
-       // destinationTimeLabel.text = destinationDateString
-        NSLog("\(destinationDateString)")
-        
-        
-    }
-
-
     
     func startTimer() {
            speedometerTiming =  NSTimer .scheduledTimerWithTimeInterval(0.01,
