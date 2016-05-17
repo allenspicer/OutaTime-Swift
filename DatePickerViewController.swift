@@ -22,15 +22,8 @@ override func viewDidLoad() {
 
     
     
-@IBAction func saveDateFromDatePicker(sender: AnyObject) {
-    
-    date = datePicker.date
-    self.performSegueWithIdentifier("UnwindDatePicker", sender: self)
-    
-    
-    
-    
-    }
+
+
     
 }
     
