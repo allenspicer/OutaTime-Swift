@@ -146,6 +146,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="great-scott-doc-back-to-the-future-drawing.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K79-Oe-HDc">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-AF-Nfs">
                                 <rect key="frame" x="140" y="192" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="445876717.15564197">
@@ -161,8 +164,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerX" secondItem="ErN-mE-eOf" secondAttribute="centerX" id="Cdp-gR-TKa"/>
-                            <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerY" secondItem="ErN-mE-eOf" secondAttribute="centerY" id="yxV-1Z-gik"/>
+                            <constraint firstItem="K79-Oe-HDc" firstAttribute="bottom" secondItem="uZU-PJ-TXL" secondAttribute="top" id="Lau-1M-a7L"/>
+                            <constraint firstAttribute="trailing" secondItem="K79-Oe-HDc" secondAttribute="trailing" id="MtW-gi-3dH"/>
+                            <constraint firstItem="K79-Oe-HDc" firstAttribute="top" secondItem="di0-rA-tds" secondAttribute="bottom" id="guc-tL-9lh"/>
+                            <constraint firstItem="MtZ-AF-Nfs" firstAttribute="centerY" secondItem="ErN-mE-eOf" secondAttribute="centerY" id="ivj-Xx-Ut6"/>
+                            <constraint firstItem="K79-Oe-HDc" firstAttribute="centerX" secondItem="MtZ-AF-Nfs" secondAttribute="centerX" id="mQd-St-5IM"/>
+                            <constraint firstItem="K79-Oe-HDc" firstAttribute="leading" secondItem="ErN-mE-eOf" secondAttribute="leading" id="oSs-A5-WQC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -192,4 +199,7 @@
             <point key="canvasLocation" x="179" y="-391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="great-scott-doc-back-to-the-future-drawing.jpg" width="1489" height="1482"/>
+    </resources>
 </document>
