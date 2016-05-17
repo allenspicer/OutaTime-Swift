@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+
+class ViewController: UIViewController, DatePickerViewControllerDelegate{
     
     @IBOutlet  var destinationTimeLabel: UILabel!
     @IBOutlet  var presentTimeLabel: UILabel!
@@ -20,23 +21,10 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "OutaTime Redux"
     }
 
-   
-    @IBAction func unwindDateController(segue:UIStoryboardSegue){
-        let i = segue.sourceViewController as! DatePickerViewController
-        if i.date != nil{
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMM dd yyyy"
-        let datePicked = i.date
-        let dateString = dateFormatter.stringFromDate(datePicked!)
-        destinationTimeLabel.text = dateString
-        }
-    }
-    
 
-    
     @IBAction func travelBack(sender: AnyObject) {
         if speedLabel.text == "88"{
             speedLabel.text = "00"
@@ -75,6 +63,22 @@ class ViewController: UIViewController{
             }
         }
     }
+    
+    func getDate(date: NSDate!){
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd YYYY"
+        let dateString = dateFormatter.stringFromDate(date)
+        destinationTimeLabel.text = dateString
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DatePickerSegue"{
+        let destination = segue.destinationViewController as! DatePickerViewController
+            destination.delegate = self
+        }
+        
+    }
+    
 
 }
 
