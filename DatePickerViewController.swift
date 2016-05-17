@@ -11,24 +11,21 @@ import UIKit
 
 class DatePickerViewController: UIViewController{
 
-var delegate:DatePickerViewControllerDelegate?
-
+var date:NSDate?
+    
 @IBOutlet weak var datePicker: UIDatePicker!
     
-func didPickDate(date: String) -> String{
-    let datePicked = datePicker.date
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "MMM dd yyyy"
-    let dateInDateFormat = datePicked
-    let date = dateFormatter.stringFromDate(dateInDateFormat)
-        return date
+
+override func viewDidLoad() {
+        super.viewDidLoad()
     }
+
     
     
+@IBAction func saveDateFromDatePicker(sender: AnyObject) {
     
-@IBAction func saveDateFromDatePicker(sender: UIButton) {
-    
-    
+    date = datePicker.date
+    self.performSegueWithIdentifier("UnwindDatePicker", sender: self)
     
     
     

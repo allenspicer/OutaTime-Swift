@@ -8,11 +8,7 @@
 
 import UIKit
 
-
-protocol DatePickerViewControllerDelegate{
-    func didPickDate(date: String) -> String}
-
-class ViewController: UIViewController, DatePickerViewControllerDelegate{
+class ViewController: UIViewController{
     
     @IBOutlet  var destinationTimeLabel: UILabel!
     @IBOutlet  var presentTimeLabel: UILabel!
@@ -24,19 +20,30 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //destinationTimeLabel.text = "JAN 01 2000"
         
     }
 
-//establish function to conform to protocol (fulfill obligation as delegate)
-    func didPickDate(date: String) -> String{
-        destinationTimeLabel.text = date
-    return date
+   
+    @IBAction func unwindDateController(segue:UIStoryboardSegue){
+        let i = segue.sourceViewController as! DatePickerViewController
+        if i.date != nil{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd yyyy"
+        let datePicked = i.date
+        let dateString = dateFormatter.stringFromDate(datePicked!)
+        destinationTimeLabel.text = dateString
+        }
     }
     
+
     
     @IBAction func travelBack(sender: AnyObject) {
-        self.startTimer()
+        if speedLabel.text == "88"{
+            speedLabel.text = "00"
+        }
+        
+        else{
+            self.startTimer()}
     }
     
     
@@ -51,7 +58,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
     
     func stopTimer (){
         speedometerTiming?.invalidate()
-      //make timer empty
+
     }
     
     func updateSpeed (){
