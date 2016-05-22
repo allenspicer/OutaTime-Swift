@@ -91,16 +91,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="delorean___time_machine__create_swf_prop__by_feraligono-d67rf9t.png" translatesAutoresizingMaskIntoConstraints="NO" id="m7C-97-DE7">
-                                <rect key="frame" x="300" y="472" width="300" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="delorean___time_machine__create_swf_prop__by_feraligono-d67rf9t.png" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-hY-3kA">
+                                <rect key="frame" x="-240" y="473" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-I0-ya3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Reu-BS-t6R" firstAttribute="top" secondItem="PWu-lS-cYr" secondAttribute="bottom" constant="20" id="1vE-Ek-hMf"/>
                             <constraint firstItem="ELJ-B7-imb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3LK-OO-ISI"/>
                             <constraint firstItem="eNl-Ru-m4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="6AE-Zd-F7c"/>
                             <constraint firstItem="PWu-lS-cYr" firstAttribute="top" secondItem="eNl-Ru-m4s" secondAttribute="bottom" constant="20" id="7MB-q8-GgY"/>
+                            <constraint firstItem="bRs-I0-ya3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="9JL-DL-rS6"/>
                             <constraint firstItem="m7b-sA-ofx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bh6-AD-6VE"/>
                             <constraint firstItem="07z-RV-dL5" firstAttribute="top" secondItem="MIt-AI-fos" secondAttribute="bottom" constant="20" id="EsN-4M-xE9"/>
                             <constraint firstItem="m7b-sA-ofx" firstAttribute="top" secondItem="Reu-BS-t6R" secondAttribute="bottom" constant="20" id="GAZ-sE-LF8"/>
@@ -108,6 +112,7 @@
                             <constraint firstItem="BUd-yg-68d" firstAttribute="top" secondItem="mSh-aF-N6p" secondAttribute="bottom" constant="20" id="Gfh-7B-18D"/>
                             <constraint firstItem="Zor-7Z-U1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ID9-Pa-swc"/>
                             <constraint firstItem="mSh-aF-N6p" firstAttribute="top" secondItem="07z-RV-dL5" secondAttribute="bottom" constant="20" id="Nyu-pj-MC0"/>
+                            <constraint firstItem="bRs-I0-ya3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="VRe-vp-xXh"/>
                             <constraint firstItem="PWu-lS-cYr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aPh-Wq-zGM"/>
                             <constraint firstItem="Reu-BS-t6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxt-Cg-gik"/>
                             <constraint firstItem="mSh-aF-N6p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbd-a4-Usr"/>
@@ -127,7 +132,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ocr-nb-m4D"/>
                     <connections>
+                        <outlet property="delorean" destination="xsU-hY-3kA" id="W7m-jO-Wx1"/>
                         <outlet property="destinationTimeLabel" destination="PWu-lS-cYr" id="1aJ-wn-f9h"/>
+                        <outlet property="flashImageView" destination="bRs-I0-ya3" id="EBI-uQ-2F0"/>
                         <outlet property="lastTimeDepartedLabel" destination="ELJ-B7-imb" id="5vD-k4-qo3"/>
                         <outlet property="presentTimeLabel" destination="m7b-sA-ofx" id="3xe-da-yrR"/>
                         <outlet property="speedLabel" destination="07z-RV-dL5" id="zjc-OH-cKK"/>
