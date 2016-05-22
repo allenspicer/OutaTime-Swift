@@ -91,6 +91,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="delorean___time_machine__create_swf_prop__by_feraligono-d67rf9t.png" translatesAutoresizingMaskIntoConstraints="NO" id="m7C-97-DE7">
+                                <rect key="frame" x="300" y="472" width="300" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -200,6 +203,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="delorean___time_machine__create_swf_prop__by_feraligono-d67rf9t.png" width="1200" height="500"/>
         <image name="great-scott-doc-back-to-the-future-drawing.jpg" width="1489" height="1482"/>
     </resources>
 </document>

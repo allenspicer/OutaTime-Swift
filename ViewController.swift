@@ -31,6 +31,8 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
         }
         
         else{
+            // have car takeoff with animation
+            
             self.startTimer()}
     }
     
