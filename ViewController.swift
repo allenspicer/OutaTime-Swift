@@ -19,6 +19,8 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
     @IBOutlet weak var flashImageView: UIImageView!
     
     
+    private var originalBounds = CGRect.zero
+    private var originalCenter = CGPoint.zero
     var takeOffBehavior: UIPushBehavior!
     var speedometerTiming:NSTimer?
     var currentSpeed: NSInteger = 0
@@ -29,8 +31,9 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
         super.viewDidLoad()
         self.title = "OutaTime Redux"
         animator = UIDynamicAnimator(referenceView: self.view)
-        //animator.removeAllBehaviors()
 
+        originalBounds = delorean.bounds
+        originalCenter = delorean.center
     }
 
 
@@ -62,6 +65,8 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
     
     func stopTimer (){
         speedometerTiming?.invalidate()
+        self.delorean.center = self.originalCenter
+        self.delorean.bounds = self.originalBounds
 
     }
     
@@ -72,15 +77,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
         }else{
             
             if(currentSpeed >= 88){
-                flashImageView.backgroundColor = UIColor.whiteColor()
-                self.view.addSubview(flashImageView)
-                UIView.animateWithDuration(1, animations: {
-                    self.flashImageView.alpha = 1.0
-                    }, completion: {
-                        (finished:Bool) in
-                        self.flashImageView.removeFromSuperview()
-                })
-
+            flash()
 
             lastTimeDepartedLabel.text = presentTimeLabel.text
             presentTimeLabel.text = destinationTimeLabel.text
@@ -89,6 +86,21 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
             }
         }
     }
+    
+    func flash(){
+        
+        flashImageView.backgroundColor = UIColor.whiteColor()
+        self.view.addSubview(flashImageView)
+        UIView.animateWithDuration(5, animations: {
+            self.flashImageView.alpha = 1.0
+            }, completion: {
+                (finished:Bool) in
+                self.flashImageView.removeFromSuperview()
+        })
+        
+    }
+    
+    
     
     func getDate(date: NSDate!){
         let dateFormatter = NSDateFormatter()
