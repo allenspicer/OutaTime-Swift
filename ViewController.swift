@@ -97,7 +97,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate{
                 (finished:Bool) in
                 self.flashImageView.removeFromSuperview()
         })
-        
+        animator.removeAllBehaviors()
     }
     
     
